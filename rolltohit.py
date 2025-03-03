@@ -4,3 +4,23 @@
 #This is a guided practice. Either follow with the video or your instructor will
 #go over this in class.
 #Video Link: https://youtu.be/89G5DN0-O3k
+import random
+
+random.seed()
+
+print("welcome to the dice roller. you will enter the number of dice and your hit target and see how many hits you get.")
+
+diceCount = int(input("how many dice are you rolling")) 
+hitTarget = int(input("what is the hit target?")) 
+
+hitcount = 0
+diceroll = 0 
+
+
+for i in range(diceCount):
+    diceroll = random.randint(1,6)
+    #print(f"Roll is {diceroll}")
+    if diceroll >= hitTarget:
+        hitcount += 1
+
+print(f"you rolled {diceCount} dice with a hit target of {hitTarget} and hit {hitcount} 
